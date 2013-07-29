@@ -3,7 +3,7 @@ require 'active_model'
 require 'active_support/core_ext/class/attribute_accessors'
 require 'active_support/core_ext/kernel'
 require 'active_support/core_ext/class/attribute'
-require 'active_support/core_ext/class/inheritable_attributes'
+#require 'active_support/core_ext/class/inheritable_attributes'
 require 'active_support/core_ext/module/aliasing'
 require 'orientdb'
 require 'validatable'
@@ -31,13 +31,13 @@ module OrientDB::AR::DocumentMixin
 
       extend ActiveModel::Callbacks
 
-      class_inheritable_hash :fields
+      class_attribute :fields
       self.fields = ActiveSupport::OrderedHash.new
 
-      class_inheritable_hash :relationships
+      class_attribute :relationships
       self.relationships = ActiveSupport::OrderedHash.new
 
-      class_inheritable_accessor :default_validation_group
+      class_attribute :default_validation_group
 
       class_attribute :connection
     end
