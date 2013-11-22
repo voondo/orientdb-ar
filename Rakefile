@@ -46,11 +46,9 @@ task :cleanup_rcov_files do
   rm_rf 'coverage.data'
 end
 
-task :spec => :check_dependencies
-
 task :default => :spec
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = "orientdb #{version}"
