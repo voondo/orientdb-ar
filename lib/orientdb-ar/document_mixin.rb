@@ -197,7 +197,7 @@ module OrientDB::AR::DocumentMixin
     end
 
     def new_document
-      OrientDB::Document.new connection, oclass_name
+      OrientDB::Document.new oclass_name
     end
 
     def from_orientdb(value)
