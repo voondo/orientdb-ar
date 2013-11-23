@@ -2,11 +2,11 @@ class OrientDB::AR::Base
 
   include ActiveModel::AttributeMethods
   include OrientDB::AR::DocumentMixin
-  extend ActiveModel::Callbacks
+  include ActiveModel::Callbacks
 
   class_attribute :connection
 
-  define_model_callbacks :validation, :save, :delete
+  define_callbacks :validation, :save, :delete
 
   def save(perform_validations = true)
     run_callbacks :save do

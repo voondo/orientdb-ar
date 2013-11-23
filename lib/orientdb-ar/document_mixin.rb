@@ -63,7 +63,7 @@ module OrientDB::AR::DocumentMixin
 
   def validate
     @last_validation_result = nil
-    _run_validation_callbacks do
+    run_callbacks :validation do
       @last_validation_result = valid?
     end
     @last_validation_result
@@ -100,7 +100,7 @@ module OrientDB::AR::DocumentMixin
     end.compact
   end
 
-  def respond_to?(method_name)
+  def respond_to?(method_name, *args)
     # Simple field value lookup
     return true if field?(method_name)
     # Dirty
