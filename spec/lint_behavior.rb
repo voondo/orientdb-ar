@@ -29,9 +29,8 @@ module RspecRailsMatchers
             super.class.model_name
           end
 
-          it                  { should be_kind_of(String) }
+          its(:to_s)          { should be_kind_of(String) }
           its(:human)         { should be_kind_of(String) }
-          its(:partial_path)  { should be_kind_of(String) }
           its(:singular)      { should be_kind_of(String) }
           its(:plural)        { should be_kind_of(String) }
         end

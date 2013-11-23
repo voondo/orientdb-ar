@@ -30,7 +30,7 @@ describe "Model" do
       p2 = Person.first :name => "Tester Testing"
       p2.name.should == p.name
       p2.age.should == p.age
-      p2.tags.map.should == p.tags
+      p2.tags.to_a.should == p.tags
     end
   end
 
