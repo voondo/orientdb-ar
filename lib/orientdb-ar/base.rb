@@ -2,13 +2,14 @@ class OrientDB::AR::Base
 
   include ActiveModel::AttributeMethods
   include OrientDB::AR::DocumentMixin
+  extend ActiveModel::Callbacks
 
   class_attribute :connection
 
   define_model_callbacks :validation, :save, :delete
 
   def save(perform_validations = true)
-    _run_save_callbacks do
+    run_callbacks :save do
       if perform_validations
         validate
         if @last_validation_result
@@ -33,7 +34,7 @@ class OrientDB::AR::Base
   private :save_without_validations
 
   def delete
-    _run_delete_callbacks do
+    run_callbacks :delete do
       @odocument.delete
       @deleted = true
     end
