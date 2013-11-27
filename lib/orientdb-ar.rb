@@ -10,4 +10,6 @@ require 'orientdb-ar/base'
 require 'orientdb-ar/embedded'
 require 'orientdb-ar/ext'
 
+require 'active_record/connection_adapters/orientdb_adapter'
+
 OrientDB::SQL.monkey_patch!
