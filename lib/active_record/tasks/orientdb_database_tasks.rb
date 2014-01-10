@@ -30,29 +30,6 @@ module ActiveRecord
         connection.drop_database configuration['database']
       end
 
-      def purge
-        establish_connection :test
-        connection.recreate_database configuration['database'], creation_options
-      end
-
-      def structure_dump(filename)
-        args = prepare_command_options('mysqldump')
-        args.concat(["--result-file", "#{filename}"])
-        args.concat(["--no-data"])
-        args.concat(["#{configuration['database']}"])
-        unless Kernel.system(*args)
-          $stderr.puts "Could not dump the database structure. "\
-                       "Make sure `mysqldump` is in your PATH and check the command output for warnings."
-        end
-      end
-
-      def structure_load(filename)
-        args = prepare_command_options('mysql')
-        args.concat(['--execute', %{SET FOREIGN_KEY_CHECKS = 0; SOURCE #{filename}; SET FOREIGN_KEY_CHECKS = 1}])
-        args.concat(["--database", "#{configuration['database']}"])
-        Kernel.system(*args)
-      end
-
       private
 
       def configuration

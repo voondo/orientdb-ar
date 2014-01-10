@@ -3,6 +3,14 @@ require 'active_record/connection_adapters/abstract_adapter'
 require 'active_record/connection_adapters/statement_pool'
 
 module ActiveRecord
+
+  # FIXME dirty monkey patch to get stuff work
+  class Migrator
+    def self.needs_migration?
+      false
+    end
+  end
+
   module ConnectionHandling
 
     VALID_ORIENTDB_CONN_PARAMS = %i( connection host password username )
@@ -64,6 +72,23 @@ module ActiveRecord
         ADAPTER_NAME
       end
 
+      def supports_migrations?
+         false
+      end
+
+      def tables
+        @connection.get_cluster_names
+      end
+
+      def active?
+        !@connection.is_closed
+      end
+
+      def disconnect!
+        @connection.close
+        super
+      end
+      
       class StatementPool < ConnectionAdapters::StatementPool
       end
 
@@ -142,7 +167,9 @@ module ActiveRecord
           when :remote then
             OrientDB::DocumentDatabasePool.new database[:url], username, password
           when :local then
-            OrientDB::DocumentDatabase.new database[:url]
+            db = OrientDB::DocumentDatabase.new database[:url]
+            db.open username, password if db.exists
+            db
           end
 
         else
