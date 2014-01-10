@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'active_model'
-require 'active_support/core_ext/class/attribute_accessors'
+require 'active_support/core_ext/module/attribute_accessors'
 require 'active_support/core_ext/kernel'
 require 'active_support/core_ext/class/attribute'
 require 'active_support/core_ext/module/aliasing'

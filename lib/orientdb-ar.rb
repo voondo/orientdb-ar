@@ -11,5 +11,6 @@ require 'orientdb-ar/embedded'
 require 'orientdb-ar/ext'
 
 require 'active_record/connection_adapters/orientdb_adapter'
+require 'active_record/tasks/orientdb_database_tasks'
 
 OrientDB::SQL.monkey_patch!

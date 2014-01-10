@@ -1,0 +1,22 @@
+# Logfile created on 2014-01-10 09:47:58 +0100 by logger.rb/v1.2.7
+I, [2014-01-10T09:47:58.840000 #6834]  INFO -- : 0:  rake (10.1.0) from /opt/jruby/lib/ruby/gems/shared/specifications/rake-10.1.0.gemspec
+I, [2014-01-10T09:48:00.932000 #6834]  INFO -- : 0:  i18n (0.6.5) from /opt/jruby/lib/ruby/gems/shared/specifications/i18n-0.6.5.gemspec
+I, [2014-01-10T09:48:00.934000 #6834]  INFO -- : 0:  minitest (4.7.5) from /home/romain/.gem/jruby/1.9/specifications/minitest-4.7.5.gemspec
+I, [2014-01-10T09:48:00.938000 #6834]  INFO -- : 0:  multi_json (1.8.2) from /home/romain/.gem/jruby/1.9/specifications/multi_json-1.8.2.gemspec
+I, [2014-01-10T09:48:00.941000 #6834]  INFO -- : 0:  atomic (1.1.14) from /home/romain/.gem/jruby/1.9/specifications/atomic-1.1.14-java.gemspec
+I, [2014-01-10T09:48:00.944000 #6834]  INFO -- : 0:  thread_safe (0.1.3) from /home/romain/.gem/jruby/1.9/specifications/thread_safe-0.1.3-java.gemspec
+I, [2014-01-10T09:48:00.946000 #6834]  INFO -- : 0:  tzinfo (0.3.38) from /home/romain/.gem/jruby/1.9/specifications/tzinfo-0.3.38.gemspec
+I, [2014-01-10T09:48:03.788000 #6834]  INFO -- : 0:  activesupport (4.0.1) from /opt/jruby/lib/ruby/gems/shared/specifications/activesupport-4.0.1.gemspec
+I, [2014-01-10T09:48:03.791000 #6834]  INFO -- : 0:  builder (3.1.4) from /home/romain/.gem/jruby/1.9/specifications/builder-3.1.4.gemspec
+I, [2014-01-10T09:48:05.384000 #6834]  INFO -- : 0:  activemodel (4.0.1) from /opt/jruby/lib/ruby/gems/shared/specifications/activemodel-4.0.1.gemspec
+I, [2014-01-10T09:48:05.387000 #6834]  INFO -- : 0:  activerecord-deprecated_finders (1.0.3) from /home/romain/.gem/jruby/1.9/specifications/activerecord-deprecated_finders-1.0.3.gemspec
+I, [2014-01-10T09:48:05.389000 #6834]  INFO -- : 0:  arel (4.0.1) from /home/romain/.gem/jruby/1.9/specifications/arel-4.0.1.gemspec
+I, [2014-01-10T09:48:08.038000 #6834]  INFO -- : 0:  activerecord (4.0.1) from /opt/jruby/lib/ruby/gems/shared/specifications/activerecord-4.0.1.gemspec
+I, [2014-01-10T09:48:09.659000 #6834]  INFO -- : 0:  diff-lcs (1.2.1) from /opt/jruby/lib/ruby/gems/shared/specifications/diff-lcs-1.2.1.gemspec
+I, [2014-01-10T09:48:09.661000 #6834]  INFO -- : 0:  jnunemaker-validatable (1.8.4) from /home/romain/.gem/jruby/1.9/specifications/jnunemaker-validatable-1.8.4.gemspec
+I, [2014-01-10T09:48:10.250000 #6834]  INFO -- : 0:  orientdb (1.6.0) from /opt/jruby/lib/ruby/gems/shared/bundler/gems/orientdb-jruby-3a57d2e54c11/orientdb.gemspec
+I, [2014-01-10T09:48:12.570000 #6834]  INFO -- : 0:  rspec-core (2.13.1) from /opt/jruby/lib/ruby/gems/shared/specifications/rspec-core-2.13.1.gemspec
+I, [2014-01-10T09:48:14.442000 #6834]  INFO -- : 0:  rspec-expectations (2.13.0) from /opt/jruby/lib/ruby/gems/shared/specifications/rspec-expectations-2.13.0.gemspec
+I, [2014-01-10T09:48:16.278000 #6834]  INFO -- : 0:  rspec-mocks (2.13.0) from /opt/jruby/lib/ruby/gems/shared/specifications/rspec-mocks-2.13.0.gemspec
+I, [2014-01-10T09:48:17.576000 #6834]  INFO -- : 0:  rspec (2.13.0) from /opt/jruby/lib/ruby/gems/shared/specifications/rspec-2.13.0.gemspec
+I, [2014-01-10T09:48:17.579000 #6834]  INFO -- : 0:  bundler (1.5.1) from /opt/jruby/lib/ruby/gems/shared/specifications/bundler-1.5.1.gemspec
